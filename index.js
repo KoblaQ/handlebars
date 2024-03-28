@@ -17,5 +17,13 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+// Rendering the contact.handlebars file
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
+// Folder for static files like css, jpg...
+app.use(express.static("public"));
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
